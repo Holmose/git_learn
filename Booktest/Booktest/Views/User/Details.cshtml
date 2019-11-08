@@ -1,0 +1,43 @@
+﻿@model Booktest.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>User</legend>
+    <table>
+        <tr>
+            <th>
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.username)
+                </div>
+            </th>
+            <th>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.username)
+                </div>
+            </th>
+         </tr>
+
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.passwd)
+                </div>
+            </td>
+            <td>
+                 <div class="display-field">
+                    @Html.DisplayFor(model => model.passwd)
+                </div>
+            </td>
+         </tr>
+
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
