@@ -27,3 +27,8 @@
 课程安排
 	属性
 		班级Id、课程科目Id、老师Id
+
+
+##Enable-Migrations -ContextTypeName CourseManagerEntities
+##Add-Migration Create201911271710
+Update-Database
