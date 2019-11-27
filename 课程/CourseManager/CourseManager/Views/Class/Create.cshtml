@@ -14,18 +14,18 @@
         <legend>Classes</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-lable col-md-2"})
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
+        <div class="editor-field col-md-10">
+            @Html.TextBoxFor(model => model.Name, new {@class = "form-control"})
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.TeacherId)
+            @Html.LabelFor(model => model.TeacherId, htmlAttributes: new { @class = "control-lable col-md-2"})
         </div>
-        <div class="editor-field">
-            <select name="TeacherId" class="editor-field">
+        <div class="editor-field col-md-10">
+            <select name="TeacherId" class="editor-field form-control">
                 @foreach (var teacher in teachers)
                 { 
                     <option value="@teacher.Id">@teacher.Name</option>
@@ -33,9 +33,11 @@
             </select>
         </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create"  class="btn btn-default"/>
+            </div>
+        </div>
     </fieldset>
 }
 

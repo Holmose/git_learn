@@ -164,6 +164,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActionLinkController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseManagementController.cs" />
@@ -174,43 +175,54 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Migrations\201911270911017_Create201911271710.cs" />
+    <Compile Include="Migrations\201911270911017_Create201911271710.Designer.cs">
+      <DependentUpon>201911270911017_Create201911271710.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ActionLinks.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\Classes.cs">
-      <DependentUpon>CourseManager.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\ClassesExtention.cs" />
+    <Compile Include="Models\ClassesExtention.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CourseManagementExtention.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\CourseManagements.cs">
-      <DependentUpon>CourseManager.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\CourseManager.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CourseManager.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CourseManager.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CourseManager.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CourseManager.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CourseManager.edmx</DependentUpon>
+    <Compile Include="Models\CourseManagerEntities.Context.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Courses.cs">
-      <DependentUpon>CourseManager.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Students.cs">
-      <DependentUpon>CourseManager.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\StudentsExtention.cs" />
+    <Compile Include="Models\StudentsExtention.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\Teachers.cs">
-      <DependentUpon>CourseManager.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\CourseManagementExtention.cs" />
+    <Compile Include="Models\WebsiteInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -267,24 +279,37 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <EntityDeploy Include="Models\CourseManager.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CourseManager.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\CourseManager.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CourseManager.edmx</DependentUpon>
-      <LastGenOutput>CourseManager.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\CourseManager.edmx.diagram">
-      <DependentUpon>CourseManager.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\CourseManager.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CourseManager.edmx</DependentUpon>
-      <LastGenOutput>CourseManager.cs</LastGenOutput>
-    </Content>
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Models\Images\accent.png" />
+    <Content Include="Models\Images\bullet.png" />
+    <Content Include="Models\Images\heroAccent.png" />
+    <Content Include="Models\Images\orderedList0.png" />
+    <Content Include="Models\Images\orderedList1.png" />
+    <Content Include="Models\Images\orderedList2.png" />
+    <Content Include="Models\Images\orderedList3.png" />
+    <Content Include="Models\Images\orderedList4.png" />
+    <Content Include="Models\Images\orderedList5.png" />
+    <Content Include="Models\Images\orderedList6.png" />
+    <Content Include="Models\Images\orderedList7.png" />
+    <Content Include="Models\Images\orderedList8.png" />
+    <Content Include="Models\Images\orderedList9.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -299,6 +324,7 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -308,19 +334,6 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -363,6 +376,12 @@
     <Content Include="Views\CourseManagement\Create.cshtml" />
     <Content Include="Views\CourseManagement\Edit.cshtml" />
     <Content Include="Views\CourseManagement\Delete.cshtml" />
+    <Content Include="Views\Shared\Navbar.cshtml" />
+    <Content Include="Views\ActionLink\Index.cshtml" />
+    <Content Include="Views\ActionLink\Details.cshtml" />
+    <Content Include="Views\ActionLink\Create.cshtml" />
+    <Content Include="Views\ActionLink\Edit.cshtml" />
+    <Content Include="Views\ActionLink\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -372,6 +391,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911270911017_Create201911271710.resx">
+      <DependentUpon>201911270911017_Create201911271710.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

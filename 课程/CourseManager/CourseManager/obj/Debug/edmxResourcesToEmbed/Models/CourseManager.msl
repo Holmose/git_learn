@@ -10,38 +10,38 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CourseManagements">
-      <EntityTypeMapping TypeName="CourseManagerModel.CourseManagements">
-        <MappingFragment StoreEntitySet="CourseManagements">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
-          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
-          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Courses">
-      <EntityTypeMapping TypeName="CourseManagerModel.Courses">
-        <MappingFragment StoreEntitySet="Courses">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="CourseManagerModel.Teachers">
+        <MappingFragment StoreEntitySet="Teachers">
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="CourseManagerModel.Students">
         <MappingFragment StoreEntitySet="Students">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Teachers">
-      <EntityTypeMapping TypeName="CourseManagerModel.Teachers">
-        <MappingFragment StoreEntitySet="Teachers">
+    <EntitySetMapping Name="CourseManagements">
+      <EntityTypeMapping TypeName="CourseManagerModel.CourseManagements">
+        <MappingFragment StoreEntitySet="CourseManagements">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Course">
+      <EntityTypeMapping TypeName="CourseManagerModel.Course">
+        <MappingFragment StoreEntitySet="Course">
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
