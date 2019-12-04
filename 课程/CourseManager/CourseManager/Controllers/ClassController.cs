@@ -6,13 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CourseManager.Models;
+using CourseManager.BLLs.Classes;
 
 namespace CourseManager.Controllers
 {
     public class ClassController : Controller
     {
         private CourseManagerEntities db = new CourseManagerEntities();
-
+        private IClassRepository _repository = new ClassRepository();
         //
         // GET: /Class/
 
@@ -46,6 +47,11 @@ namespace CourseManager.Controllers
 
         //
         // POST: /Class/Create
+
+        public ActionResult ShowCourseManagement(int id)
+        {
+            return View(_repository.GetClassCourse(id));
+        }
 
         [HttpPost]
         public ActionResult Create(Classes classes)

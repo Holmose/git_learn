@@ -62,3 +62,4 @@ D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.pdb
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201912041617.resources
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
+D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.csprojResolveAssemblyReference.cache
