@@ -31,7 +31,7 @@ namespace CourseManager.Models
         public DbSet<Courses> Courses { get; set; }
         public DbSet<Students> Students { get; set; }
         public DbSet<Teachers> Teachers { get; set; }
-
         public DbSet<SideBars> SideBars { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }
