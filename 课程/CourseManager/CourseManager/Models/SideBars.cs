@@ -13,7 +13,7 @@ namespace CourseManager.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     
-    public partial class ActionLinks
+    public partial class SideBars
     {
         [Key]
         [Required]

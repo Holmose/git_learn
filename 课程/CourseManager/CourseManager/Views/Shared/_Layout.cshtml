@@ -8,22 +8,34 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+
+        <style>
+            .sidebar {
+                padding-top:30px;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+            }
+            .sidebar li a {
+                color:#333;
+            }
+        </style>
     </head>
     <body>
         <header>
             @Html.Action("Navbar", "Home")
         </header>
         <div class="container body-content">
-            @RenderSection("featured", required: false)
-            <div class="col-md-3">
-
+            <div class="col-md-3 float-left">
+                @Html.Action("SideBar", "Home")
             </div>
-            <div class="col-md-9">
-                
+            <div class="col-md-9 float-right">
+                @RenderSection("featured", required: false)
                 @RenderBody()
             </div>
 
         </div>
+        <br />
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">

@@ -3,12 +3,17 @@
 @{
     var site = (WebsiteInfo)ViewBag.Site;
 }
-
+<style>
+    .title a{
+        line-height:82px; 
+        height:82px;
+    }
+</style>
 <div class="content-wrapper">
-    <div class="float-left">
-        <p class="site-title">@Html.ActionLink(WebsiteInfo.SiteName, "Index", "Home")</p>
+    <div class="col-md-3 float-left title">
+        <div class="site-title">@Html.ActionLink(WebsiteInfo.SiteName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand"})</div>
     </div>
-    <div class="float-right">
+    <div class="col-md-9 float-right">
         <section id="login">
             @Html.Partial("_LoginPartial")
         </section>

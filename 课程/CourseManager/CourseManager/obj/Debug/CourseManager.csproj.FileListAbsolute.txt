@@ -60,5 +60,5 @@ D:\holmose\git_learn\课程\CourseManager\CourseManager\bin\zh-Hans\Microsoft.We
 D:\holmose\git_learn\课程\CourseManager\CourseManager\bin\zh-Hans\WebMatrix.WebData.resources.dll
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.dll
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.pdb
-D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201911271710.resources
+D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201912041617.resources
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache

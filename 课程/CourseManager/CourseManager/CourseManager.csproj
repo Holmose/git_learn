@@ -169,17 +169,20 @@
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseManagementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SideBarController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911270911017_Create201911271710.cs" />
-    <Compile Include="Migrations\201911270911017_Create201911271710.Designer.cs">
-      <DependentUpon>201911270911017_Create201911271710.cs</DependentUpon>
+    <Compile Include="Migrations\201912040820211_Create201912041617.cs" />
+    <Compile Include="Migrations\201912040820211_Create201912041617.Designer.cs">
+      <DependentUpon>201912040820211_Create201912041617.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
+    <Compile Include="Migrations\Seeds\SideBarCreator.cs" />
     <Compile Include="Models\AccountModels.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -216,6 +219,7 @@
     <Compile Include="Models\WebsiteInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\SideBars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -289,27 +293,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
-    <Content Include="Models\Images\accent.png" />
-    <Content Include="Models\Images\bullet.png" />
-    <Content Include="Models\Images\heroAccent.png" />
-    <Content Include="Models\Images\orderedList0.png" />
-    <Content Include="Models\Images\orderedList1.png" />
-    <Content Include="Models\Images\orderedList2.png" />
-    <Content Include="Models\Images\orderedList3.png" />
-    <Content Include="Models\Images\orderedList4.png" />
-    <Content Include="Models\Images\orderedList5.png" />
-    <Content Include="Models\Images\orderedList6.png" />
-    <Content Include="Models\Images\orderedList7.png" />
-    <Content Include="Models\Images\orderedList8.png" />
-    <Content Include="Models\Images\orderedList9.png" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
+    <None Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -382,6 +368,12 @@
     <Content Include="Views\ActionLink\Create.cshtml" />
     <Content Include="Views\ActionLink\Edit.cshtml" />
     <Content Include="Views\ActionLink\Delete.cshtml" />
+    <Content Include="Views\SideBar\Index.cshtml" />
+    <Content Include="Views\SideBar\Details.cshtml" />
+    <Content Include="Views\SideBar\Create.cshtml" />
+    <Content Include="Views\SideBar\Edit.cshtml" />
+    <Content Include="Views\SideBar\Delete.cshtml" />
+    <Content Include="Views\Shared\SideBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -393,8 +385,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911270911017_Create201911271710.resx">
-      <DependentUpon>201911270911017_Create201911271710.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912040820211_Create201912041617.resx">
+      <DependentUpon>201912040820211_Create201912041617.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -39,8 +39,16 @@ namespace CourseManager.Controllers
             var actionlinks = db.ActionLinks.ToList();
             var a = actionlinks.OrderBy(c => c.order);
             ViewBag.Site = site;
-
             return PartialView("~/Views/Shared/Navbar.cshtml",a);
+        }
+
+        [ChildActionOnly]
+        public ActionResult SideBar()
+        {
+            var sidebars = db.SideBars.ToList();
+            var a = sidebars.OrderBy(c => c.order);
+            ViewBag.SideBars = sidebars;
+            return PartialView("~/Views/Shared/SideBar.cshtml");
         }
     }
 }
