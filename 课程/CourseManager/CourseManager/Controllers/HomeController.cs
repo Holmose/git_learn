@@ -1,4 +1,5 @@
-﻿using CourseManager.Models;
+﻿using CourseManager.Filters;
+using CourseManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace CourseManager.Controllers
 {
+    [RequireAuthentication]
     public class HomeController : Controller
     {
         private CourseManagerEntities db = new CourseManagerEntities();
