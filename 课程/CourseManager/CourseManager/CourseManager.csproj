@@ -175,19 +175,21 @@
     <Compile Include="Controllers\SideBarController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
-    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912041222088_Create201912042021.cs" />
-    <Compile Include="Migrations\201912041222088_Create201912042021.Designer.cs">
-      <DependentUpon>201912041222088_Create201912042021.cs</DependentUpon>
+    <Compile Include="Migrations\201912110105208_Create201912110852.cs" />
+    <Compile Include="Migrations\201912110105208_Create201912110852.Designer.cs">
+      <DependentUpon>201912110105208_Create201912110852.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
-    <Compile Include="Migrations\Seeds\SideBarCreator.cs" />
-    <Compile Include="Migrations\Seeds\UserCreator.cs" />
-    <Compile Include="Models\AccountModels.cs">
+    <Compile Include="Migrations\Seeds\ActionLinkCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Migrations\Seeds\SideBarCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Migrations\Seeds\UserCreator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\ActionLinks.cs">
@@ -220,7 +222,9 @@
     <Compile Include="Models\Teachers.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\Users.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\WebsiteInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -383,6 +387,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -391,8 +396,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912041222088_Create201912042021.resx">
-      <DependentUpon>201912041222088_Create201912042021.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912110105208_Create201912110852.resx">
+      <DependentUpon>201912110105208_Create201912110852.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,10 +20,7 @@ namespace CourseManager.Models
         {
         }
     
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            
-        }
+
     
         public DbSet<ActionLinks> ActionLinks { get; set; }
         public DbSet<Classes> Classes { get; set; }
