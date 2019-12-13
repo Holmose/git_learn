@@ -3,7 +3,7 @@ namespace CourseManager.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Create201912110852 : DbMigration
+    public partial class Create201912131516 : DbMigration
     {
         public override void Up()
         {
@@ -87,7 +87,7 @@ namespace CourseManager.Migrations
                         id = c.Int(nullable: false, identity: true),
                         Account = c.String(nullable: false, maxLength: 20),
                         Name = c.String(nullable: false, maxLength: 20),
-                        Password = c.String(nullable: false, maxLength: 20),
+                        Password = c.String(nullable: false, maxLength: 200),
                     })
                 .PrimaryKey(t => t.id);
             

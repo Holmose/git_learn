@@ -29,7 +29,7 @@ namespace CourseManager.Models
         public string Name { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(200)]
         [Display(Name = "用户密码")]
         [DataType(DataType.Password)]
         public string Password { get; set; }

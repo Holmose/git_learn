@@ -9,6 +9,7 @@ using System.Web.Mvc;
 namespace CourseManager.Controllers
 {
     [RequireAuthentication]
+    [ActionResultExceptionFilter]
     public class HomeController : Controller
     {
         private CourseManagerEntities db = new CourseManagerEntities();

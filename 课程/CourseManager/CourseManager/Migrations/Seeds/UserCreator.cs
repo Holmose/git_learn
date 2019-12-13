@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using CourseManager.Models.ValidatableObjects;
 
 namespace CourseManager.Migrations.Seeds
 {
@@ -23,7 +24,7 @@ namespace CourseManager.Migrations.Seeds
                 {
                     Name = "admin",
                     Account = "admin",
-                    Password = "123456"
+                    Password = "123456".MD5Encoding()
                 }
             };
             foreach (var user in iniitialUsers)

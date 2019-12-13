@@ -60,8 +60,6 @@ D:\holmose\git_learn\课程\CourseManager\CourseManager\bin\zh-Hans\Microsoft.We
 D:\holmose\git_learn\课程\CourseManager\CourseManager\bin\zh-Hans\WebMatrix.WebData.resources.dll
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.dll
 D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.pdb
-D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
-D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\Holmsoe\git_learn\课程\CourseManager\CourseManager\bin\CourseManager.dll
 C:\Users\Administrator\Desktop\Holmsoe\git_learn\课程\CourseManager\CourseManager\bin\CourseManager.pdb
 C:\Users\Administrator\Desktop\Holmsoe\git_learn\课程\CourseManager\CourseManager\bin\Antlr3.Runtime.dll
@@ -192,4 +190,5 @@ D:\holmose\git-learn\git_learn\课程\CourseManager\CourseManager\obj\Debug\Cour
 D:\holmose\git-learn\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.pdb
 D:\holmose\git-learn\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201912110852.resources
 D:\holmose\git-learn\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
-D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201912110852.resources
+D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201912131516.resources
+D:\holmose\git_learn\课程\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
