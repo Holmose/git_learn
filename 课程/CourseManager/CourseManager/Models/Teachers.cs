@@ -20,6 +20,7 @@ namespace CourseManager.Models
         public int Id { get; set; }
         [Required]
         [StringLength(20)]
+        [Display(Name="姓名")]
         public string Name { get; set; }
     }
 }

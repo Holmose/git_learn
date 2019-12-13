@@ -19,10 +19,13 @@ namespace CourseManager.Models
         [Required]
         public int Id { get; set; }
         [Required]
+        [Display(Name = "班级")]
         public int ClassId { get; set; }
         [Required]
+        [Display(Name = "课程")]
         public int CourseId { get; set; }
         [Required]
+        [Display(Name = "班主任")]
         public int TeacherId { get; set; }
     }
 }

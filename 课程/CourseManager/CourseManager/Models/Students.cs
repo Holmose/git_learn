@@ -11,7 +11,7 @@ namespace CourseManager.Models
 {
     using System;
     using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Students
     {
@@ -20,8 +20,10 @@ using System.ComponentModel.DataAnnotations;
         public int Id { get; set; }
         [StringLength(20)]
         [Required]
+        [Display(Name = "姓名")]
         public string Name { get; set; }
         [Required]
+        [Display(Name = "班级")]
         public int ClassId { get; set; }
     }
 }

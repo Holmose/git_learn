@@ -19,9 +19,6 @@ namespace CourseManager.Models
             : base("name=CourseManagerEntities")
         {
         }
-    
-
-    
         public DbSet<ActionLinks> ActionLinks { get; set; }
         public DbSet<Classes> Classes { get; set; }
         public DbSet<CourseManagements> CourseManagements { get; set; }

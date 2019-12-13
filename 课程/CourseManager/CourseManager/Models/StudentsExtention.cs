@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,6 +8,7 @@ namespace CourseManager.Models
 {
     public partial class Students
     {
+        [Display(Name = "班级")]
         public string ClassName 
         {
             get {

@@ -56,12 +56,21 @@ namespace CourseManager.Controllers
         {
             if (ModelState.IsValid)
             {
+                users.Password = users.Password.MD5Encoding();
                 db.Users.Add(users);
                 db.SaveChanges();
                 return RedirectToAction("Login");
             }
 
             return View(users);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            //TODO
+            return RedirectToAction("Login");
         }
     }
 }

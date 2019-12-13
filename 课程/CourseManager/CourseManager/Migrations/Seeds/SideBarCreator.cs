@@ -41,7 +41,7 @@ namespace CourseManager.Migrations.Seeds
                 },
                 new SideBars
                 {
-                    Name = "课程科目管理",
+                    Name = "课程管理",
                     Controller = "Course",
                     Action = "Index",
                     order = 4

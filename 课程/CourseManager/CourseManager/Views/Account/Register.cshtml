@@ -1,4 +1,4 @@
-﻿@model CourseManager.Models.ValidatableObjects.LoginInput
+﻿@model CourseManager.Models.Users
 @{
     Layout = null;
 }
@@ -33,6 +33,14 @@
                     <div class="editor-field">
                         @Html.EditorFor(model => model.Account)
                         @Html.ValidationMessageFor(model => model.Account)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Name)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
                     </div>
 
                     <div class="editor-label">
