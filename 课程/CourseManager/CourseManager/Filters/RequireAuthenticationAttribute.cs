@@ -14,32 +14,15 @@ namespace CourseManager.Filters
         {
             if (filterContext.HttpContext.Session != null)
             {
-                //TODO
                 var Suser = filterContext.HttpContext.Session["user"];
-                var user = "";
-                if (Suser == null)
-                {
-                    user = " ";
-                }
-                else
-                {
-                    user = Suser.ToString();
-                }
+                var user = (Suser != null ? Suser.ToString() : " ");
                 if (!string.IsNullOrWhiteSpace(user))
                 {
                     return;
                 }
 
                 var cookie = filterContext.HttpContext.Request.Cookies["user"];
-                var temp = "";
-                if (cookie == null)
-                {
-                    temp = " ";
-                }
-                else
-                {
-                    temp = cookie.ToString();
-                }
+                var temp = (cookie != null ? cookie.ToString() : " ");
                 if (string.IsNullOrWhiteSpace(temp))
                 {
                     throw new UnauthorizedException();
